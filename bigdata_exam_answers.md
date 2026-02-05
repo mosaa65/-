@@ -88,14 +88,11 @@
 
 ```mermaid
 flowchart LR
-    A["1️⃣ تحليل المتطلبات<br/>Requirement Analysis"] --> B["2️⃣ التقييم والاختيار<br/>Evaluation & Selection"]
-    B --> C["3️⃣ التصميم المنطقي<br/>Logical Design"]
-    C --> D["4️⃣ التصميم الفيزيائي<br/>Physical Design"]
-    D --> E["5️⃣ التنفيذ والتحميل<br/>Implementation"]
-    E --> F["6️⃣ الاختبار والضبط<br/>Testing & Tuning"]
-    F --> G["7️⃣ التشغيل والصيانة<br/>Operate & Maintain"]
-    G --> H["8️⃣ النمو والتغيير<br/>Growth & Change"]
-    H -.-> A
+    RA["1️⃣ تحليل المتطلبات<br/>Requirement Analysis"] --> DD["2️⃣ تصميم قاعدة البيانات<br/>Database Design"] --> ES["3️⃣ التقييم والاختيار<br/>Evaluation and Selection"]
+    ES --> LD["4️⃣ التصميم المنطقي<br/>Logical Database Design"] --> PD["5️⃣ التصميم الفيزيائي<br/>Physical Database Design"]
+    PD --> IM["6️⃣ التنفيذ<br/>Implementation"] --> DL["7️⃣ تحميل البيانات<br/>Data Loading"]
+    DL --> TT["8️⃣ الاختبار وضبط الأداء<br/>Testing and Performance Tuning"] --> OM["9️⃣ التشغيل والصيانة<br/>Operate and Maintain"]
+    OM --> GC["🔟 النمو والتغيير<br/>Growth and Change"] --> RA
 ```
 
 ### 📊 دورة حياة البيانات الضخمة (Big Data Life Cycle)
