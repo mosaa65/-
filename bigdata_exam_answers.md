@@ -87,12 +87,23 @@
 ### 📊 دورة حياة قواعد البيانات (RDBMS Life Cycle)
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "basis"}}}%%
 flowchart LR
-    RA["1️⃣ تحليل المتطلبات<br/>Requirement Analysis"] --> DD["2️⃣ تصميم قاعدة البيانات<br/>Database Design"] --> ES["3️⃣ التقييم والاختيار<br/>Evaluation and Selection"]
-    ES --> LD["4️⃣ التصميم المنطقي<br/>Logical Database Design"] --> PD["5️⃣ التصميم الفيزيائي<br/>Physical Database Design"]
-    PD --> IM["6️⃣ التنفيذ<br/>Implementation"] --> DL["7️⃣ تحميل البيانات<br/>Data Loading"]
-    DL --> TT["8️⃣ الاختبار وضبط الأداء<br/>Testing and Performance Tuning"] --> OM["9️⃣ التشغيل والصيانة<br/>Operate and Maintain"]
-    OM --> GC["🔟 النمو والتغيير<br/>Growth and Change"] --> RA
+    RA["1️⃣ تحليل المتطلبات<br/>Requirement Analysis"]
+    DD["2️⃣ تصميم قاعدة البيانات<br/>Database Design"]
+    ES["3️⃣ التقييم والاختيار<br/>Evaluation and Selection"]
+    LD["4️⃣ التصميم المنطقي<br/>Logical Database Design"]
+    PD["5️⃣ التصميم الفيزيائي<br/>Physical Database Design"]
+    IM["6️⃣ التنفيذ<br/>Implementation"]
+    DL["7️⃣ تحميل البيانات<br/>Data Loading"]
+    TT["8️⃣ الاختبار وضبط الأداء<br/>Testing and Performance Tuning"]
+    OM["9️⃣ التشغيل والصيانة<br/>Operate and Maintain"]
+    GC["🔟 النمو والتغيير<br/>Growth and Change"]
+
+    RA --> DD --> ES --> LD --> PD --> IM --> DL --> TT --> OM --> GC --> RA
+
+    classDef rect fill:#ffffff,stroke:#7b61ff,stroke-width:1px,rx:0,ry:0;
+    class RA,DD,ES,LD,PD,IM,DL,TT,OM,GC rect;
 ```
 
 ### 📊 دورة حياة البيانات الضخمة (Big Data Life Cycle)
