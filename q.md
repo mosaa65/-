@@ -66,7 +66,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    🗄️ DBMS Environment                 │
+│                    🗄️ DBMS Environment                  │
 ├─────────────────────────────────────────────────────────┤
 │  📊 Database         │  قاعدة البيانات                  │
 │  ⚙️ DBMS             │  نظام إدارة قواعد البيانات       │
@@ -86,53 +86,14 @@
 
 ### 📊 دورة حياة قواعد البيانات (RDBMS Life Cycle)
 
-**🔄 RDBMS LIFECYCLE - الشكل المستطيل:**
-
+```mermaid
+flowchart LR
+    RA["1️⃣ تحليل المتطلبات<br/>Requirement Analysis"] --> DD["2️⃣ تصميم قاعدة البيانات<br/>Database Design"] --> ES["3️⃣ التقييم والاختيار<br/>Evaluation and Selection"]
+    ES --> LD["4️⃣ التصميم المنطقي<br/>Logical Database Design"] --> PD["5️⃣ التصميم الفيزيائي<br/>Physical Database Design"]
+    PD --> IM["6️⃣ التنفيذ<br/>Implementation"] --> DL["7️⃣ تحميل البيانات<br/>Data Loading"]
+    DL --> TT["8️⃣ الاختبار وضبط الأداء<br/>Testing and Performance Tuning"] --> OM["9️⃣ التشغيل والصيانة<br/>Operate and Maintain"]
+    OM --> GC["🔟 النمو والتغيير<br/>Growth and Change"] --> RA
 ```
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                                                                              │
-│    ┌─────────────┐     ┌─────────────┐     ┌─────────────┐                   │
-│ ┌──│ Requirement │────▶│  Database   │────▶│ Evaluation  │──┐                │
-│ │  │  Analysis   │     │   Design    │     │& Selection  │  │                │
-│ │  └─────────────┘     └─────────────┘     └─────────────┘  │                │
-│ │                                                           ▼                │
-│ │  ┌─────────────┐                         ┌─────────────┐                   │
-│ │  │ Growth and  │                         │   Logical   │                   │
-│ │  │   Change    │                         │  Database   │                   │
-│ │  └──────▲──────┘                         │   Design    │                   │
-│ │         │                                └──────┬──────┘                   │
-│ │         │                                       ▼                          │
-│ │  ┌─────────────┐                         ┌─────────────┐                   │
-│ │  │ Operate and │                         │  Physical   │                   │
-│ │  │  Maintain   │                         │  Database   │                   │
-│ │  └──────▲──────┘                         │   Design    │                   │
-│ │         │                                └──────┬──────┘                   │
-│ │         │         RDBMS LIFECYCLE               ▼                          │
-│ │  ┌─────────────┐                         ┌─────────────┐                   │
-│ │  │ Testing and │     ┌─────────────┐     │             │                   │
-│ └──│ Performance │◀────│Data Loading │◀────│Implementation│                  │
-│    │   Tuning    │     │             │     │             │                   │
-│    └─────────────┘     └─────────────┘     └─────────────┘                   │
-│                                                                              │
-└──────────────────────────────────────────────────────────────────────────────┘
-```
-
-**📋 مراحل دورة حياة RDBMS:**
-
-| # | المرحلة | بالإنجليزية |
-|---|---------|-------------|
-| 1️⃣ | تحليل المتطلبات | Requirement Analysis |
-| 2️⃣ | تصميم قاعدة البيانات | Database Design |
-| 3️⃣ | التقييم والاختيار | Evaluation and Selection |
-| 4️⃣ | التصميم المنطقي | Logical Database Design |
-| 5️⃣ | التصميم الفيزيائي | Physical Database Design |
-| 6️⃣ | التنفيذ | Implementation |
-| 7️⃣ | تحميل البيانات | Data Loading |
-| 8️⃣ | الاختبار وضبط الأداء | Testing and Performance Tuning |
-| 9️⃣ | التشغيل والصيانة | Operate and Maintain |
-| 🔟 | النمو والتغيير | Growth and Change |
-
----
 
 ### 📊 دورة حياة البيانات الضخمة (Big Data Life Cycle)
 
@@ -147,8 +108,6 @@ flowchart TD
         F --> G["📈 التصور<br/>Visualization"]
     end
 ```
-
-### ⚖️ مقارنة الدورتين:
 
 | دورة RDBMS | دورة Big Data |
 |------------|---------------|
